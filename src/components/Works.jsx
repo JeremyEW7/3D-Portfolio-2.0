@@ -3,7 +3,7 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
+import { youtube } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { 
   effects,
@@ -44,7 +44,7 @@ const ProjectCard = ({
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
-                src={github}
+                src={youtube}
                 alt='source code'
                 className='w-1/2 h-1/2 object-contain'
               />
@@ -91,7 +91,7 @@ const EffectCard = ({
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
-                src={github}
+                src={youtube}
                 alt='source code'
                 className='w-1/2 h-1/2 object-contain'
               />
@@ -121,7 +121,7 @@ const Works = () => {
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
           Following projects showcases my experience through
-          my year in college.
+          my years when in college.
         </motion.p>
       </div>
 

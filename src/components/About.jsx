@@ -48,7 +48,7 @@ const About = () => {
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
         I'm an undergraduate student with experience in Unreal Engine 5 and C++. 
-        I love to learn new things and would love to solve problems with my creativity. Let's have some fun!
+        I love to learn new things and would love to solve problems with my creativity.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
