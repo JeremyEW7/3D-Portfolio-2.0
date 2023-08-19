@@ -22,8 +22,15 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} >
+        <Tilt
+          options={{
+            max: 45,
+            scale: 1,
+            speed: 450,
+          }}
+          className='bg-tertiary p-10 rounded-2xl sm:w-[300px] w-full'
+        >
         <div className='relative w-full h-[200px]' onClick={() => window.open(source_code_link, "_blank")}>
           <img
             src={image}
@@ -48,6 +55,8 @@ const ProjectCard = ({
         <div className='mt-5 flex items-center justify-center'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
         </div>
+        
+      </Tilt>
     </motion.div>
   );
 };
@@ -61,8 +70,15 @@ const EffectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-     
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} >
+        <Tilt
+          options={{
+            max: 45,
+            scale: 1,
+            speed: 450,
+          }}
+          className='bg-tertiary p-5 rounded-2xl sm:w-[300px] w-full'
+        >
         <div className='relative w-full h-[200px]' onClick={() => window.open(source_code_link, "_blank")}>
           <img
             src={image}
@@ -87,6 +103,7 @@ const EffectCard = ({
         <div className='mt-5 flex items-center justify-center'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
         </div>
+      </Tilt>
     </motion.div>
   );
 };
@@ -113,7 +130,7 @@ const Works = () => {
         <h2 className={`${styles.sectionHeadText}`}>Game Project</h2>
       </motion.div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
+      <div className='mt-20 flex flex-wrap gap-7 justify-center'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
@@ -122,11 +139,11 @@ const Works = () => {
       <motion.div className="mt-24 flex items-center justify-center">
         <h2 className={`${styles.sectionHeadText}`}>Effects</h2>
       </motion.div>
-
-      <div className='mt-20 flex flex-wrap gap-7'>
-        {effects.map((effect, index) => (
-          <EffectCard key={`effect-${index}`} index={index} {...effect} />
-        ))}
+      
+      <div className="mt-20 flex flex-wrap gap-7 justify-center">
+          {effects.map((effect, index) => (
+            <EffectCard key={`effect-${index}`} index={index} {...effect} />
+          ))}
       </div>
       
     </>
