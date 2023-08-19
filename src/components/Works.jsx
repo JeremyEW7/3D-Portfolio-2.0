@@ -23,15 +23,8 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
-      >
-        <div className='relative w-full h-[230px]' onClick={() => window.open(source_code_link, "_blank")}>
+
+        <div className='relative w-full h-[200px]' onClick={() => window.open(source_code_link, "_blank")}>
           <img
             src={image}
             
@@ -55,7 +48,6 @@ const ProjectCard = ({
         <div className='mt-5 flex items-center justify-center'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
         </div>
-      </Tilt>
     </motion.div>
   );
 };
@@ -70,15 +62,8 @@ const EffectCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
-      >
-        <div className='relative w-full h-[230px]' onClick={() => window.open(source_code_link, "_blank")}>
+     
+        <div className='relative w-full h-[200px]' onClick={() => window.open(source_code_link, "_blank")}>
           <img
             src={image}
             
@@ -102,7 +87,6 @@ const EffectCard = ({
         <div className='mt-5 flex items-center justify-center'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
         </div>
-      </Tilt>
     </motion.div>
   );
 };
